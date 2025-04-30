@@ -33,7 +33,7 @@ https://binary-search-tree-pi.vercel.app/
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/yourusername/Binary-Search-Tree.git
+git clone https://github.com/saiprasanna56/Binary-Search-Tree.git
 cd Binary-Search-Tree
 npm install
 npm start
