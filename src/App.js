@@ -15,6 +15,7 @@ function App() {
     const val = parseInt(value, 10);
     let result;
     bst.clearHighlights();
+
     switch (op) {
       case 'insert': {
         const res = bst.insert(val);
@@ -73,39 +74,29 @@ function App() {
       <h1>BST Visualizer</h1>
       <p className="depth-indicator">Current Max Depth: {currentDepth}</p>
       <div className="controls">
-        <div className="input-group">
-          <input
-            type="number"
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
-            placeholder="Enter value"
-          />
-          <button onClick={() => handleOperation('insert')}>Insert</button>
-          <button className="danger" onClick={() => handleOperation('delete')}>Delete</button>
-          <button onClick={() => handleOperation('search')}>Search</button>
-        </div>
-        <div className="input-group">
-          <button onClick={() => handleOperation('min')}>Find Min</button>
-          <button onClick={() => handleOperation('max')}>Find Max</button>
-        </div>
-        <div className="input-group">
-          <button onClick={() => handleOperation('inorder')}>Inorder</button>
-          <button onClick={() => handleOperation('preorder')}>Preorder</button>
-          <button onClick={() => handleOperation('postorder')}>Postorder</button>
-          <button onClick={() => handleOperation('depth')}>Tree Depth</button>
-        </div>
-        <div className="input-group">
-          <input
-            type="number"
-            value={depth}
-            onChange={(e) => setDepth(e.target.value)}
-            placeholder="Set max depth"
-          />
-          <button onClick={handleSetDepth}>Apply Depth</button>
-        </div>
-        <div className="input-group">
-          <button className="danger" onClick={() => handleOperation('clear')}>Clear Tree</button>
-        </div>
+        <input
+          type="number"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+          placeholder="Enter value"
+        />
+        <button onClick={() => handleOperation('insert')}>Insert</button>
+        <button className="danger" onClick={() => handleOperation('delete')}>Delete</button>
+        <button onClick={() => handleOperation('search')}>Search</button>
+        <button onClick={() => handleOperation('min')}>Find Min</button>
+        <button onClick={() => handleOperation('max')}>Find Max</button>
+        <button onClick={() => handleOperation('inorder')}>Inorder</button>
+        <button onClick={() => handleOperation('preorder')}>Preorder</button>
+        <button onClick={() => handleOperation('postorder')}>Postorder</button>
+        <button onClick={() => handleOperation('depth')}>Tree Depth</button>
+        <input
+          type="number"
+          value={depth}
+          onChange={(e) => setDepth(e.target.value)}
+          placeholder="Set max depth"
+        />
+        <button onClick={handleSetDepth}>Apply Depth</button>
+        <button className="danger" onClick={() => handleOperation('clear')}>Clear Tree</button>
       </div>
       <p className="info">{info}</p>
       <TreeVisualizer root={bst.root} />
