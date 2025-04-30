@@ -17,6 +17,11 @@ A React-based visualizer for performing and displaying binary search tree (BST) 
 
 ---
 
+## Deployment Link
+https://binary-search-tree-pi.vercel.app/
+
+---
+
 ## 🧰 Tech Stack
 
 - [React.js](https://reactjs.org/)
